@@ -14,10 +14,14 @@
 }
 
 html {
+  max-width: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
   background: linear-gradient(180deg, var(--bg), var(--soft));
   color: var(--text);
@@ -205,6 +209,7 @@ section {
 }
 
 .about-image {
+  overflow: hidden;
   position: relative;
 }
 
@@ -218,7 +223,8 @@ section {
 
 .badge {
   position: absolute;
-  right: -22px;
+  overflow: hidden;
+  right: 10px;
   bottom: 34px;
   width: 116px;
   height: 116px;
@@ -587,11 +593,11 @@ footer p {
 }
 
 .prev{
-    left:-60px;
+    left:8px;
 }
 
 .next{
-    right:-60px;
+    right:8px;
 }
 
 .dots{
@@ -686,5 +692,31 @@ footer p {
 
   .next {
     right: 0;
+  }
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  max-width: 100%;
+}
+
+/* evita qualquer elemento estourar tela */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* corrige header mobile */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  nav {
+    width: 100%;
+    overflow-x: hidden;
   }
 }
